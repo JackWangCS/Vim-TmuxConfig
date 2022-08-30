@@ -7,10 +7,10 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 # 2. Copy the nvim config file 
 mkdir ~/.config/nvim
-cp . ~/.config/nvim/init.vim
+cp init.vim ~/.config/nvim/init.vim
 
-# 3. Run :PlugInstall in vim
-
-# 4. Install Python provider
+# 3. Install Python provider
 pip3 install neovim
+
+# 4. Run :PlugInstall and :UpdateRemotePlugins in vim
 
