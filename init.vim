@@ -36,7 +36,6 @@ vnoremap > >gv
 vnoremap . :normal .<CR>
 
 syntax on
-colorscheme monokai
 
 autocmd BufEnter * lcd %:p:h
 
@@ -44,15 +43,13 @@ filetype plugin indent on
 
 set undodir=~/.config/nvim/undodir
 
-call plug#begin()
+call plug#begin('~/.local/share/nvim/site/plugged')
 
 Plug 'vim-scripts/Vimball'
 Plug 'godlygeek/tabular'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-markdown'
@@ -69,11 +66,14 @@ Plug 'mhinz/vim-startify'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/vimproc.vim'
-Plug 'crusoexia/vim-monokai'
 Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'bling/vim-airline'
+
+" Color themes
+Plug 'crusoexia/vim-monokai'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -129,8 +129,13 @@ au Syntax c,cpp,go,h,java,python,javascript,scala,coffee,scss  RainbowParenthese
 " - Airline -------------------
 set noshowmode
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 0
-" let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+
 " ----------------------------
 
 " - Clear last search highlighting ---
