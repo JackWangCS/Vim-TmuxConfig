@@ -57,14 +57,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-markdown'
 Plug 'vim-scripts/nginx.vim'
-Plug 'Valloric/YouCompleteMe'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'Raimondi/delimitMate'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -79,12 +76,6 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'bling/vim-airline'
 
 call plug#end()
-
-let g:javascript_plugin_jsdoc           = 1
-let g:javascript_conceal_function       = "ƒ"
-let g:javascript_conceal_null           = "ø"
-let g:javascript_conceal_arrow_function = "⇒"
-let g:javascript_conceal_return         = "⇚"
 
 let g:jsx_ext_required = 0
 
@@ -101,8 +92,6 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$']
 
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_python_binary_path = 'python3'
 
 set foldmethod=indent
 set foldlevel=99
@@ -114,9 +103,6 @@ au BufRead,BufNewFile nginx.conf set ft=nginx
 
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
-" set completeopt-=preview    " No preview for python doc
-" Complete options (disable preview scratch window, longest removed to aways show menu)
-set completeopt=longest,menu
 
 " - rainbow_parentheses ------
 let g:rbpt_colorpairs = [
