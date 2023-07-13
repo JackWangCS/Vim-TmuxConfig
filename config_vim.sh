@@ -1,6 +1,9 @@
 set -x
 set -e
 
+# Requirements:
+# Install Nodejs(CoC plugin depends on it)
+
 # 1. Install Vim-Plug(https://fanwangecon.github.io/Tex4Econ/nontex/install/linux/fn_vim.html)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
