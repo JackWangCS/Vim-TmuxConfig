@@ -78,7 +78,7 @@ let g:jsx_ext_required = 0
 
 let g:syntastic_check_on_open=1
 
-let g:python_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/bin/python3'
 set noshowmode
 let g:echodoc#enable_at_startup = 1
 
